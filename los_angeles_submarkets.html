@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8660434322f30b5a0eac9194a659a212 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 12px; left: 12px; z-index: 9999; 
+            background: rgba(255,255,255,.9); padding: 8px 12px; 
+            border-radius: 8px; font-family: Inter, system-ui, Arial, sans-serif;
+            box-shadow: 0 2px 6px rgba(0,0,0,.1);">
+  <span style="font-size: 16px; font-weight: 700;">Los Angeles Life Sciences Submarkets</span><br/>
+  <span style="font-size: 12px; opacity:.7;">Conejo Valley · West Los Angeles · San Gabriel Valley · South Bay</span>
+</div>
+    
+            <div class="folium-map" id="map_8660434322f30b5a0eac9194a659a212" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8660434322f30b5a0eac9194a659a212 = L.map(
+                "map_8660434322f30b5a0eac9194a659a212",
+                {
+                    center: [34.02, -118.35],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d068c50d997e4916fe62160c58bcec44 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8660434322f30b5a0eac9194a659a212);
+        
+    
+        function geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829 = L.geoJson(null, {
+                onEachFeature: geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829_onEachFeature,
+            
+                style: geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829_styler,
+        });
+
+        function geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829_add (data) {
+            geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829
+                .addData(data)
+                .addTo(map_8660434322f30b5a0eac9194a659a212);
+        }
+            geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829_add({"features": [{"geometry": {"coordinates": [[[-118.925, 34.165000000000006], [-118.835, 34.165000000000006], [-118.835, 34.235], [-118.925, 34.235], [-118.925, 34.165000000000006]]], "type": "Polygon"}, "properties": {"name": "Conejo Valley"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4ffd3e18fd3eb11f3ab0fa83fe02f829.bindTooltip(
+                `<div>
+                     Conejo Valley
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d658cc3a8e5a9d01e57742f4b610432 = L.marker(
+                [34.2, -118.88],
+                {}
+            ).addTo(map_8660434322f30b5a0eac9194a659a212);
+        
+    
+            var div_icon_d6fb9f32b276e8521d4246dbd0e5ba97 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                Conejo Valley\n            \u003c/div\u003e\n            ", "iconAnchor": [85, 18], "iconSize": [170, 36]});
+            marker_3d658cc3a8e5a9d01e57742f4b610432.setIcon(div_icon_d6fb9f32b276e8521d4246dbd0e5ba97);
+        
+    
+        function geo_json_603e45ea39878f4d88d93a4ebcaafbbc_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_603e45ea39878f4d88d93a4ebcaafbbc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_603e45ea39878f4d88d93a4ebcaafbbc = L.geoJson(null, {
+                onEachFeature: geo_json_603e45ea39878f4d88d93a4ebcaafbbc_onEachFeature,
+            
+                style: geo_json_603e45ea39878f4d88d93a4ebcaafbbc_styler,
+        });
+
+        function geo_json_603e45ea39878f4d88d93a4ebcaafbbc_add (data) {
+            geo_json_603e45ea39878f4d88d93a4ebcaafbbc
+                .addData(data)
+                .addTo(map_8660434322f30b5a0eac9194a659a212);
+        }
+            geo_json_603e45ea39878f4d88d93a4ebcaafbbc_add({"features": [{"geometry": {"coordinates": [[[-118.49000000000001, 33.995000000000005], [-118.41, 33.995000000000005], [-118.41, 34.065], [-118.49000000000001, 34.065], [-118.49000000000001, 33.995000000000005]]], "type": "Polygon"}, "properties": {"name": "West Los Angeles"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_603e45ea39878f4d88d93a4ebcaafbbc.bindTooltip(
+                `<div>
+                     West Los Angeles
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_673e2fc1b2decdc0752c3548a8994b60 = L.marker(
+                [34.03, -118.45],
+                {}
+            ).addTo(map_8660434322f30b5a0eac9194a659a212);
+        
+    
+            var div_icon_31bb74620669b77d884be1a5b6afcdf8 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                West Los Angeles\n            \u003c/div\u003e\n            ", "iconAnchor": [85, 18], "iconSize": [170, 36]});
+            marker_673e2fc1b2decdc0752c3548a8994b60.setIcon(div_icon_31bb74620669b77d884be1a5b6afcdf8);
+        
+    
+        function geo_json_94432d6b80fac0f6d6ea2ec4bae48061_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_94432d6b80fac0f6d6ea2ec4bae48061_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_94432d6b80fac0f6d6ea2ec4bae48061 = L.geoJson(null, {
+                onEachFeature: geo_json_94432d6b80fac0f6d6ea2ec4bae48061_onEachFeature,
+            
+                style: geo_json_94432d6b80fac0f6d6ea2ec4bae48061_styler,
+        });
+
+        function geo_json_94432d6b80fac0f6d6ea2ec4bae48061_add (data) {
+            geo_json_94432d6b80fac0f6d6ea2ec4bae48061
+                .addData(data)
+                .addTo(map_8660434322f30b5a0eac9194a659a212);
+        }
+            geo_json_94432d6b80fac0f6d6ea2ec4bae48061_add({"features": [{"geometry": {"coordinates": [[[-118.13, 34.1], [-118.03, 34.1], [-118.03, 34.18], [-118.13, 34.18], [-118.13, 34.1]]], "type": "Polygon"}, "properties": {"name": "San Gabriel Valley"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_94432d6b80fac0f6d6ea2ec4bae48061.bindTooltip(
+                `<div>
+                     San Gabriel Valley
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8cb96288f3bc19b2806b932fce639e88 = L.marker(
+                [34.14, -118.08],
+                {}
+            ).addTo(map_8660434322f30b5a0eac9194a659a212);
+        
+    
+            var div_icon_b64a5b055cd1369d0e903c96f2cc18a2 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                San Gabriel Valley\n            \u003c/div\u003e\n            ", "iconAnchor": [85, 18], "iconSize": [170, 36]});
+            marker_8cb96288f3bc19b2806b932fce639e88.setIcon(div_icon_b64a5b055cd1369d0e903c96f2cc18a2);
+        
+    
+        function geo_json_77bee31712aea5d3047009382952664c_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_77bee31712aea5d3047009382952664c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_77bee31712aea5d3047009382952664c = L.geoJson(null, {
+                onEachFeature: geo_json_77bee31712aea5d3047009382952664c_onEachFeature,
+            
+                style: geo_json_77bee31712aea5d3047009382952664c_styler,
+        });
+
+        function geo_json_77bee31712aea5d3047009382952664c_add (data) {
+            geo_json_77bee31712aea5d3047009382952664c
+                .addData(data)
+                .addTo(map_8660434322f30b5a0eac9194a659a212);
+        }
+            geo_json_77bee31712aea5d3047009382952664c_add({"features": [{"geometry": {"coordinates": [[[-118.395, 33.800000000000004], [-118.30499999999999, 33.800000000000004], [-118.30499999999999, 33.88], [-118.395, 33.88], [-118.395, 33.800000000000004]]], "type": "Polygon"}, "properties": {"name": "South Bay"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_77bee31712aea5d3047009382952664c.bindTooltip(
+                `<div>
+                     South Bay
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bab7a944192c91d2cf17e2c29238539a = L.marker(
+                [33.84, -118.35],
+                {}
+            ).addTo(map_8660434322f30b5a0eac9194a659a212);
+        
+    
+            var div_icon_8e79756db03ca2c78723470ae9ba7baa = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                South Bay\n            \u003c/div\u003e\n            ", "iconAnchor": [85, 18], "iconSize": [170, 36]});
+            marker_bab7a944192c91d2cf17e2c29238539a.setIcon(div_icon_8e79756db03ca2c78723470ae9ba7baa);
+        
+</script>
+</html>

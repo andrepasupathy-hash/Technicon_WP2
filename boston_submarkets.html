@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a20044961503df7e5ec9ff49090c4c09 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 12px; left: 12px; z-index: 9999; 
+            background: rgba(255,255,255,.9); padding: 8px 12px; 
+            border-radius: 8px; font-family: Inter, system-ui, Arial, sans-serif;
+            box-shadow: 0 2px 6px rgba(0,0,0,.1);">
+  <span style="font-size: 16px; font-weight: 700;">Boston Life Sciences Submarkets</span><br/>
+  <span style="font-size: 12px; opacity:.7;">Highlighted: East Cambridge, Boston, West Cambridge–Watertown, Waltham–Lexington</span>
+</div>
+    
+            <div class="folium-map" id="map_a20044961503df7e5ec9ff49090c4c09" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a20044961503df7e5ec9ff49090c4c09 = L.map(
+                "map_a20044961503df7e5ec9ff49090c4c09",
+                {
+                    center: [42.385, -71.145],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b802f3d26004ae2bc2333c464ee51680 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        
+    
+        function geo_json_c28b2cc0309d9af541213a37c93f4769_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_c28b2cc0309d9af541213a37c93f4769_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c28b2cc0309d9af541213a37c93f4769 = L.geoJson(null, {
+                onEachFeature: geo_json_c28b2cc0309d9af541213a37c93f4769_onEachFeature,
+            
+                style: geo_json_c28b2cc0309d9af541213a37c93f4769_styler,
+        });
+
+        function geo_json_c28b2cc0309d9af541213a37c93f4769_add (data) {
+            geo_json_c28b2cc0309d9af541213a37c93f4769
+                .addData(data)
+                .addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        }
+            geo_json_c28b2cc0309d9af541213a37c93f4769_add({"features": [{"geometry": {"coordinates": [[[-71.08999999999999, 42.3615], [-71.074, 42.3615], [-71.074, 42.371500000000005], [-71.08999999999999, 42.371500000000005], [-71.08999999999999, 42.3615]]], "type": "Polygon"}, "properties": {"name": "East Cambridge"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_c28b2cc0309d9af541213a37c93f4769.bindTooltip(
+                `<div>
+                     East Cambridge
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_73138d2065ed66757ead33bc6b94e629 = L.marker(
+                [42.3665, -71.082],
+                {}
+            ).addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        
+    
+            var div_icon_7790941a9fb6e87ba029e9477dc4184f = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                East Cambridge\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_73138d2065ed66757ead33bc6b94e629.setIcon(div_icon_7790941a9fb6e87ba029e9477dc4184f);
+        
+    
+        function geo_json_ebf943f8192c79cab3427362485a74f7_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_ebf943f8192c79cab3427362485a74f7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ebf943f8192c79cab3427362485a74f7 = L.geoJson(null, {
+                onEachFeature: geo_json_ebf943f8192c79cab3427362485a74f7_onEachFeature,
+            
+                style: geo_json_ebf943f8192c79cab3427362485a74f7_styler,
+        });
+
+        function geo_json_ebf943f8192c79cab3427362485a74f7_add (data) {
+            geo_json_ebf943f8192c79cab3427362485a74f7
+                .addData(data)
+                .addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        }
+            geo_json_ebf943f8192c79cab3427362485a74f7_add({"features": [{"geometry": {"coordinates": [[[-71.05600000000001, 42.346000000000004], [-71.036, 42.346000000000004], [-71.036, 42.36], [-71.05600000000001, 42.36], [-71.05600000000001, 42.346000000000004]]], "type": "Polygon"}, "properties": {"name": "Boston"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_ebf943f8192c79cab3427362485a74f7.bindTooltip(
+                `<div>
+                     Boston
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9c624052b78b8a57fd9d4a10f965bb4a = L.marker(
+                [42.353, -71.046],
+                {}
+            ).addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        
+    
+            var div_icon_f210becff880e79133e59ef92a0b4d3b = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                Boston\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_9c624052b78b8a57fd9d4a10f965bb4a.setIcon(div_icon_f210becff880e79133e59ef92a0b4d3b);
+        
+    
+        function geo_json_29482f93ccbcc6aa58274bb4a018adff_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_29482f93ccbcc6aa58274bb4a018adff_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_29482f93ccbcc6aa58274bb4a018adff = L.geoJson(null, {
+                onEachFeature: geo_json_29482f93ccbcc6aa58274bb4a018adff_onEachFeature,
+            
+                style: geo_json_29482f93ccbcc6aa58274bb4a018adff_styler,
+        });
+
+        function geo_json_29482f93ccbcc6aa58274bb4a018adff_add (data) {
+            geo_json_29482f93ccbcc6aa58274bb4a018adff
+                .addData(data)
+                .addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        }
+            geo_json_29482f93ccbcc6aa58274bb4a018adff_add({"features": [{"geometry": {"coordinates": [[[-71.19, 42.36], [-71.13, 42.36], [-71.13, 42.400000000000006], [-71.19, 42.400000000000006], [-71.19, 42.36]]], "type": "Polygon"}, "properties": {"name": "West Cambridge\u2013Watertown"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_29482f93ccbcc6aa58274bb4a018adff.bindTooltip(
+                `<div>
+                     West Cambridge–Watertown
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5cbcf401b9c2f50f4b657c90cbb615fe = L.marker(
+                [42.38, -71.16],
+                {}
+            ).addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        
+    
+            var div_icon_07504f79de9e6f46a2b54f89e061a8b3 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                West Cambridge\u2013Watertown\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_5cbcf401b9c2f50f4b657c90cbb615fe.setIcon(div_icon_07504f79de9e6f46a2b54f89e061a8b3);
+        
+    
+        function geo_json_cbe8f17e61fa61e23b6746d2ea89ee13_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_cbe8f17e61fa61e23b6746d2ea89ee13_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cbe8f17e61fa61e23b6746d2ea89ee13 = L.geoJson(null, {
+                onEachFeature: geo_json_cbe8f17e61fa61e23b6746d2ea89ee13_onEachFeature,
+            
+                style: geo_json_cbe8f17e61fa61e23b6746d2ea89ee13_styler,
+        });
+
+        function geo_json_cbe8f17e61fa61e23b6746d2ea89ee13_add (data) {
+            geo_json_cbe8f17e61fa61e23b6746d2ea89ee13
+                .addData(data)
+                .addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        }
+            geo_json_cbe8f17e61fa61e23b6746d2ea89ee13_add({"features": [{"geometry": {"coordinates": [[[-71.27, 42.4], [-71.2, 42.4], [-71.2, 42.449999999999996], [-71.27, 42.449999999999996], [-71.27, 42.4]]], "type": "Polygon"}, "properties": {"name": "Waltham\u2013Lexington"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_cbe8f17e61fa61e23b6746d2ea89ee13.bindTooltip(
+                `<div>
+                     Waltham–Lexington
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6e1a6523666c841b6ce9d1dee3c85fa = L.marker(
+                [42.425, -71.235],
+                {}
+            ).addTo(map_a20044961503df7e5ec9ff49090c4c09);
+        
+    
+            var div_icon_3317cd65fb7a7d231cbe3144671cd9e2 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                Waltham\u2013Lexington\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_b6e1a6523666c841b6ce9d1dee3c85fa.setIcon(div_icon_3317cd65fb7a7d231cbe3144671cd9e2);
+        
+</script>
+</html>

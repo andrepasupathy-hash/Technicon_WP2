@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dbd781499ec86c8b6e307b1c31fecae6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 12px; left: 12px; z-index: 9999; 
+            background: rgba(255,255,255,.9); padding: 8px 12px; 
+            border-radius: 8px; font-family: Inter, system-ui, Arial, sans-serif;
+            box-shadow: 0 2px 6px rgba(0,0,0,.1);">
+  <span style="font-size: 16px; font-weight: 700;">San Diego Life Sciences Submarkets</span><br/>
+  <span style="font-size: 12px; opacity:.7;">Torrey Pines, Sorrento Valley, Sorrento Mesa, University Town City</span>
+</div>
+    
+            <div class="folium-map" id="map_dbd781499ec86c8b6e307b1c31fecae6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dbd781499ec86c8b6e307b1c31fecae6 = L.map(
+                "map_dbd781499ec86c8b6e307b1c31fecae6",
+                {
+                    center: [32.88, -117.18],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6b8f5f9f20c6d79e8f5bdec5e9c3e12b = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        
+    
+        function geo_json_e62460bd84247eecd07d95e0a7618de5_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_e62460bd84247eecd07d95e0a7618de5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e62460bd84247eecd07d95e0a7618de5 = L.geoJson(null, {
+                onEachFeature: geo_json_e62460bd84247eecd07d95e0a7618de5_onEachFeature,
+            
+                style: geo_json_e62460bd84247eecd07d95e0a7618de5_styler,
+        });
+
+        function geo_json_e62460bd84247eecd07d95e0a7618de5_add (data) {
+            geo_json_e62460bd84247eecd07d95e0a7618de5
+                .addData(data)
+                .addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        }
+            geo_json_e62460bd84247eecd07d95e0a7618de5_add({"features": [{"geometry": {"coordinates": [[[-117.258, 32.8745], [-117.228, 32.8745], [-117.228, 32.8995], [-117.258, 32.8995], [-117.258, 32.8745]]], "type": "Polygon"}, "properties": {"name": "Torrey Pines"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e62460bd84247eecd07d95e0a7618de5.bindTooltip(
+                `<div>
+                     Torrey Pines
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_18109552e3f2fe5575fe0a7590e64311 = L.marker(
+                [32.887, -117.243],
+                {}
+            ).addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        
+    
+            var div_icon_c3f51f26a2924e97d039551d7597ca0d = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                Torrey Pines\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_18109552e3f2fe5575fe0a7590e64311.setIcon(div_icon_c3f51f26a2924e97d039551d7597ca0d);
+        
+    
+        function geo_json_dcc85817e1e37ccdd69d23c3fd8fe815_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_dcc85817e1e37ccdd69d23c3fd8fe815_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_dcc85817e1e37ccdd69d23c3fd8fe815 = L.geoJson(null, {
+                onEachFeature: geo_json_dcc85817e1e37ccdd69d23c3fd8fe815_onEachFeature,
+            
+                style: geo_json_dcc85817e1e37ccdd69d23c3fd8fe815_styler,
+        });
+
+        function geo_json_dcc85817e1e37ccdd69d23c3fd8fe815_add (data) {
+            geo_json_dcc85817e1e37ccdd69d23c3fd8fe815
+                .addData(data)
+                .addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        }
+            geo_json_dcc85817e1e37ccdd69d23c3fd8fe815_add({"features": [{"geometry": {"coordinates": [[[-117.225, 32.887499999999996], [-117.195, 32.887499999999996], [-117.195, 32.9125], [-117.225, 32.9125], [-117.225, 32.887499999999996]]], "type": "Polygon"}, "properties": {"name": "Sorrento Valley"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_dcc85817e1e37ccdd69d23c3fd8fe815.bindTooltip(
+                `<div>
+                     Sorrento Valley
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e82021c075b8241e17de190c6520afea = L.marker(
+                [32.9, -117.21],
+                {}
+            ).addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        
+    
+            var div_icon_fe8395c9471a5a9ff71ed5b6fc854edc = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                Sorrento Valley\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_e82021c075b8241e17de190c6520afea.setIcon(div_icon_fe8395c9471a5a9ff71ed5b6fc854edc);
+        
+    
+        function geo_json_890ac0a03b0789cdc6f33d6afeaef7a0_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_890ac0a03b0789cdc6f33d6afeaef7a0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_890ac0a03b0789cdc6f33d6afeaef7a0 = L.geoJson(null, {
+                onEachFeature: geo_json_890ac0a03b0789cdc6f33d6afeaef7a0_onEachFeature,
+            
+                style: geo_json_890ac0a03b0789cdc6f33d6afeaef7a0_styler,
+        });
+
+        function geo_json_890ac0a03b0789cdc6f33d6afeaef7a0_add (data) {
+            geo_json_890ac0a03b0789cdc6f33d6afeaef7a0
+                .addData(data)
+                .addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        }
+            geo_json_890ac0a03b0789cdc6f33d6afeaef7a0_add({"features": [{"geometry": {"coordinates": [[[-117.18, 32.887499999999996], [-117.15, 32.887499999999996], [-117.15, 32.9125], [-117.18, 32.9125], [-117.18, 32.887499999999996]]], "type": "Polygon"}, "properties": {"name": "Sorrento Mesa"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_890ac0a03b0789cdc6f33d6afeaef7a0.bindTooltip(
+                `<div>
+                     Sorrento Mesa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_084f97c587c87cd57499430e62e0e217 = L.marker(
+                [32.9, -117.165],
+                {}
+            ).addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        
+    
+            var div_icon_fefa5f910ace66495b798834e9e9321d = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                Sorrento Mesa\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_084f97c587c87cd57499430e62e0e217.setIcon(div_icon_fefa5f910ace66495b798834e9e9321d);
+        
+    
+        function geo_json_61688777a2c571b0a046dcf8ed284b36_styler(feature) {
+            switch(feature.properties.name) {
+                default:
+                    return {"color": "#2f6f73", "dashArray": "6,6", "fillColor": "#e6f2f3", "fillOpacity": 0.7, "weight": 2};
+            }
+        }
+
+        function geo_json_61688777a2c571b0a046dcf8ed284b36_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_61688777a2c571b0a046dcf8ed284b36 = L.geoJson(null, {
+                onEachFeature: geo_json_61688777a2c571b0a046dcf8ed284b36_onEachFeature,
+            
+                style: geo_json_61688777a2c571b0a046dcf8ed284b36_styler,
+        });
+
+        function geo_json_61688777a2c571b0a046dcf8ed284b36_add (data) {
+            geo_json_61688777a2c571b0a046dcf8ed284b36
+                .addData(data)
+                .addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        }
+            geo_json_61688777a2c571b0a046dcf8ed284b36_add({"features": [{"geometry": {"coordinates": [[[-117.235, 32.857499999999995], [-117.205, 32.857499999999995], [-117.205, 32.8825], [-117.235, 32.8825], [-117.235, 32.857499999999995]]], "type": "Polygon"}, "properties": {"name": "University Town City"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_61688777a2c571b0a046dcf8ed284b36.bindTooltip(
+                `<div>
+                     University Town City
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a3c7418431f998f996412768f7f45da8 = L.marker(
+                [32.87, -117.22],
+                {}
+            ).addTo(map_dbd781499ec86c8b6e307b1c31fecae6);
+        
+    
+            var div_icon_27e7150270c458d95bca1620624c0947 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"background:#2f6f73;color:white;padding:6px 10px;border-radius:8px;\n                        font-weight:600; font-family:Inter,system-ui,Arial,sans-serif; \n                        font-size:12px; box-shadow:0 2px 6px rgba(0,0,0,.15);\n                        text-align:center; white-space:nowrap;\"\u003e\n                University Town City\n            \u003c/div\u003e\n            ", "iconAnchor": [75, 18], "iconSize": [150, 36]});
+            marker_a3c7418431f998f996412768f7f45da8.setIcon(div_icon_27e7150270c458d95bca1620624c0947);
+        
+</script>
+</html>
