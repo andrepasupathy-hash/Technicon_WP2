@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c29f2ef1f51b3e0a385d102aad28bd2f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c29f2ef1f51b3e0a385d102aad28bd2f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c29f2ef1f51b3e0a385d102aad28bd2f = L.map(
+                "map_c29f2ef1f51b3e0a385d102aad28bd2f",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2b289b62e330c5bde7b1cb2868956e96 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c29f2ef1f51b3e0a385d102aad28bd2f);
+        
+    
+            var marker_cluster_c29de324dd83e68041cfe9bd5513b1c4 = L.markerClusterGroup(
+                {}
+            );
+            map_c29f2ef1f51b3e0a385d102aad28bd2f.addLayer(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+            var circle_marker_a7ffc506c46fc4de2647bc1e7f00677e = L.circleMarker(
+                [32.806671, -86.79113],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.2915619758885, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_b007532bec1d97120dfdc3d089badc90 = L.popup({"maxWidth": 350});
+
+        
+            var html_e1412df2be2d7691f05d5e6765758ddb = $(`<div id="html_e1412df2be2d7691f05d5e6765758ddb" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">AL: 11 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>API – Other</td><td style='text-align:right'>2</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>2</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_b007532bec1d97120dfdc3d089badc90.setContent(html_e1412df2be2d7691f05d5e6765758ddb);
+        
+
+        circle_marker_a7ffc506c46fc4de2647bc1e7f00677e.bindPopup(popup_b007532bec1d97120dfdc3d089badc90)
+        ;
+
+        
+    
+    
+            circle_marker_a7ffc506c46fc4de2647bc1e7f00677e.bindTooltip(
+                `<div>
+                     AL: 11 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_11da8425752540943af6a882cace44c0 = L.circleMarker(
+                [34.969704, -92.373123],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.330127018922193, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_d2ca590e4a25428337e3b7417cd8eab1 = L.popup({"maxWidth": 350});
+
+        
+            var html_d32c98043ed5cb767e2be21a2a83c1f4 = $(`<div id="html_d32c98043ed5cb767e2be21a2a83c1f4" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">AR: 3 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>2</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_d2ca590e4a25428337e3b7417cd8eab1.setContent(html_d32c98043ed5cb767e2be21a2a83c1f4);
+        
+
+        circle_marker_11da8425752540943af6a882cace44c0.bindPopup(popup_d2ca590e4a25428337e3b7417cd8eab1)
+        ;
+
+        
+    
+    
+            circle_marker_11da8425752540943af6a882cace44c0.bindTooltip(
+                `<div>
+                     AR: 3 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_08abb62da79bd067ef6906c2cfaf751d = L.circleMarker(
+                [33.729759, -111.431221],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_0e42e854322b25c4ffece65ad06b5c12 = L.popup({"maxWidth": 350});
+
+        
+            var html_cac68a346317bb1eefbfb841147abb51 = $(`<div id="html_cac68a346317bb1eefbfb841147abb51" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">AZ: 9 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>4</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_0e42e854322b25c4ffece65ad06b5c12.setContent(html_cac68a346317bb1eefbfb841147abb51);
+        
+
+        circle_marker_08abb62da79bd067ef6906c2cfaf751d.bindPopup(popup_0e42e854322b25c4ffece65ad06b5c12)
+        ;
+
+        
+    
+    
+            circle_marker_08abb62da79bd067ef6906c2cfaf751d.bindTooltip(
+                `<div>
+                     AZ: 9 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d509ecd14d58164a28e107de52a7d0ed = L.circleMarker(
+                [36.116203, -119.681564],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_16958040c6c2edfd413c87dacad25319 = L.popup({"maxWidth": 350});
+
+        
+            var html_9cf6e236950e350290ce42875f2dba39 = $(`<div id="html_9cf6e236950e350290ce42875f2dba39" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">CA: 85 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>24</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>17</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>16</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>15</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>10</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>3</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_16958040c6c2edfd413c87dacad25319.setContent(html_9cf6e236950e350290ce42875f2dba39);
+        
+
+        circle_marker_d509ecd14d58164a28e107de52a7d0ed.bindPopup(popup_16958040c6c2edfd413c87dacad25319)
+        ;
+
+        
+    
+    
+            circle_marker_d509ecd14d58164a28e107de52a7d0ed.bindTooltip(
+                `<div>
+                     CA: 85 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bda0afc47b870791c0ebcb795f114775 = L.circleMarker(
+                [39.059811, -105.311104],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.9895788082818, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_275553a9a3fbf1b3a6059b698d328325 = L.popup({"maxWidth": 350});
+
+        
+            var html_b6d3d259989a3fd9a85addf517dadf8a = $(`<div id="html_b6d3d259989a3fd9a85addf517dadf8a" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">CO: 23 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>10</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>4</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_275553a9a3fbf1b3a6059b698d328325.setContent(html_b6d3d259989a3fd9a85addf517dadf8a);
+        
+
+        circle_marker_bda0afc47b870791c0ebcb795f114775.bindPopup(popup_275553a9a3fbf1b3a6059b698d328325)
+        ;
+
+        
+    
+    
+            circle_marker_bda0afc47b870791c0ebcb795f114775.bindTooltip(
+                `<div>
+                     CO: 23 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_94afaf27355e2356e728e928c733da7c = L.circleMarker(
+                [41.597782, -72.755371],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.535533905932738, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_4aa95286f19f2ab66362c32b177a7919 = L.popup({"maxWidth": 350});
+
+        
+            var html_39fb7be2a60aa2bd1b46fdb1d747cef1 = $(`<div id="html_39fb7be2a60aa2bd1b46fdb1d747cef1" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">CT: 2 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_4aa95286f19f2ab66362c32b177a7919.setContent(html_39fb7be2a60aa2bd1b46fdb1d747cef1);
+        
+
+        circle_marker_94afaf27355e2356e728e928c733da7c.bindPopup(popup_4aa95286f19f2ab66362c32b177a7919)
+        ;
+
+        
+    
+    
+            circle_marker_94afaf27355e2356e728e928c733da7c.bindTooltip(
+                `<div>
+                     CT: 2 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49f2f98c24b118e1dcce220d17e6b014 = L.circleMarker(
+                [39.318523, -75.507141],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.590169943749475, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_2f48dfd0659025f0c0102c51c24c6826 = L.popup({"maxWidth": 350});
+
+        
+            var html_4ead7dc2b20c6832fce645628c39c2e2 = $(`<div id="html_4ead7dc2b20c6832fce645628c39c2e2" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">DE: 5 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>3</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_2f48dfd0659025f0c0102c51c24c6826.setContent(html_4ead7dc2b20c6832fce645628c39c2e2);
+        
+
+        circle_marker_49f2f98c24b118e1dcce220d17e6b014.bindPopup(popup_2f48dfd0659025f0c0102c51c24c6826)
+        ;
+
+        
+    
+    
+            circle_marker_49f2f98c24b118e1dcce220d17e6b014.bindTooltip(
+                `<div>
+                     DE: 5 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fd3abe417ef5b60e12f3f9f840330f81 = L.circleMarker(
+                [27.766279, -81.686783],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_e1abef6bef64d1c8640504ef3499b8a8 = L.popup({"maxWidth": 350});
+
+        
+            var html_7e7f8f0bf621a55dab825400f9f6306e = $(`<div id="html_7e7f8f0bf621a55dab825400f9f6306e" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">FL: 110 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>43</td></tr><tr><td>API – Other</td><td style='text-align:right'>19</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>19</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>17</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>9</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>3</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_e1abef6bef64d1c8640504ef3499b8a8.setContent(html_7e7f8f0bf621a55dab825400f9f6306e);
+        
+
+        circle_marker_fd3abe417ef5b60e12f3f9f840330f81.bindPopup(popup_e1abef6bef64d1c8640504ef3499b8a8)
+        ;
+
+        
+    
+    
+            circle_marker_fd3abe417ef5b60e12f3f9f840330f81.bindTooltip(
+                `<div>
+                     FL: 110 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_03cce3c6e1a8405f38c938acfac3c01e = L.circleMarker(
+                [33.040619, -83.643074],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.747548783981962, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_a85a4b00c9e83c8ee38048ec1f78c88a = L.popup({"maxWidth": 350});
+
+        
+            var html_12ffdd514310d99e065eec8afe8768fd = $(`<div id="html_12ffdd514310d99e065eec8afe8768fd" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">GA: 26 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>FDF – Other</td><td style='text-align:right'>7</td></tr><tr><td>API – Other</td><td style='text-align:right'>6</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>6</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>4</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_a85a4b00c9e83c8ee38048ec1f78c88a.setContent(html_12ffdd514310d99e065eec8afe8768fd);
+        
+
+        circle_marker_03cce3c6e1a8405f38c938acfac3c01e.bindPopup(popup_a85a4b00c9e83c8ee38048ec1f78c88a)
+        ;
+
+        
+    
+    
+            circle_marker_03cce3c6e1a8405f38c938acfac3c01e.bindTooltip(
+                `<div>
+                     GA: 26 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9e2707a247ba1c51e51b16654aca8a48 = L.circleMarker(
+                [42.011539, -93.210526],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.013878188659973, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_aa1d5fceb978ec86741bd8be435208b3 = L.popup({"maxWidth": 350});
+
+        
+            var html_21577c70ab1a67868d0a3e44d6efb1bb = $(`<div id="html_21577c70ab1a67868d0a3e44d6efb1bb" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">IA: 13 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>5</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>3</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>2</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_aa1d5fceb978ec86741bd8be435208b3.setContent(html_21577c70ab1a67868d0a3e44d6efb1bb);
+        
+
+        circle_marker_9e2707a247ba1c51e51b16654aca8a48.bindPopup(popup_aa1d5fceb978ec86741bd8be435208b3)
+        ;
+
+        
+    
+    
+            circle_marker_9e2707a247ba1c51e51b16654aca8a48.bindTooltip(
+                `<div>
+                     IA: 13 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dd0db17099f446726caaf9c777efc914 = L.circleMarker(
+                [44.240459, -114.478828],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.330127018922193, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_9640bb13274a2ff64796695519894ee1 = L.popup({"maxWidth": 350});
+
+        
+            var html_7100320d7081f08c713227a05b6d1cc0 = $(`<div id="html_7100320d7081f08c713227a05b6d1cc0" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">ID: 3 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_9640bb13274a2ff64796695519894ee1.setContent(html_7100320d7081f08c713227a05b6d1cc0);
+        
+
+        circle_marker_dd0db17099f446726caaf9c777efc914.bindPopup(popup_9640bb13274a2ff64796695519894ee1)
+        ;
+
+        
+    
+    
+            circle_marker_dd0db17099f446726caaf9c777efc914.bindTooltip(
+                `<div>
+                     ID: 3 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_83c6570853d5c5b74dd963417c0f8fe1 = L.circleMarker(
+                [40.349457, -88.986137],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.853571071357127, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_74726090de30f5a7499e3d807addffff = L.popup({"maxWidth": 350});
+
+        
+            var html_f396d1e3ac2c33ab6e1274ff40092af1 = $(`<div id="html_f396d1e3ac2c33ab6e1274ff40092af1" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">IL: 51 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>26</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>10</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>8</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_74726090de30f5a7499e3d807addffff.setContent(html_f396d1e3ac2c33ab6e1274ff40092af1);
+        
+
+        circle_marker_83c6570853d5c5b74dd963417c0f8fe1.bindPopup(popup_74726090de30f5a7499e3d807addffff)
+        ;
+
+        
+    
+    
+            circle_marker_83c6570853d5c5b74dd963417c0f8fe1.bindTooltip(
+                `<div>
+                     IL: 51 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f75a52ff70099a82d0f981af4c3ba018 = L.circleMarker(
+                [39.849426, -86.258278],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_46bef2b3e5a591ab1369c6de197e4927 = L.popup({"maxWidth": 350});
+
+        
+            var html_627463ccd52367cf43d73e6feb35f009 = $(`<div id="html_627463ccd52367cf43d73e6feb35f009" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">IN: 16 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>6</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>3</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>2</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_46bef2b3e5a591ab1369c6de197e4927.setContent(html_627463ccd52367cf43d73e6feb35f009);
+        
+
+        circle_marker_f75a52ff70099a82d0f981af4c3ba018.bindPopup(popup_46bef2b3e5a591ab1369c6de197e4927)
+        ;
+
+        
+    
+    
+            circle_marker_f75a52ff70099a82d0f981af4c3ba018.bindTooltip(
+                `<div>
+                     IN: 16 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8acd758adbb4b62658fdc24fe8525a86 = L.circleMarker(
+                [38.5266, -96.726486],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.013878188659973, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_8905a065875b49ff1063f632012dd513 = L.popup({"maxWidth": 350});
+
+        
+            var html_c555a504d7e58f9ccc87814757428289 = $(`<div id="html_c555a504d7e58f9ccc87814757428289" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">KS: 13 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>4</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>2</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_8905a065875b49ff1063f632012dd513.setContent(html_c555a504d7e58f9ccc87814757428289);
+        
+
+        circle_marker_8acd758adbb4b62658fdc24fe8525a86.bindPopup(popup_8905a065875b49ff1063f632012dd513)
+        ;
+
+        
+    
+    
+            circle_marker_8acd758adbb4b62658fdc24fe8525a86.bindTooltip(
+                `<div>
+                     KS: 13 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_32018c0270b1f0f4a085f38a88116b0b = L.circleMarker(
+                [37.66814, -84.670067],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.726039399558573, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_b5965bfb028d908fecf33f4ec88379af = L.popup({"maxWidth": 350});
+
+        
+            var html_873de4bc2cf0f44ebbae75a678787544 = $(`<div id="html_873de4bc2cf0f44ebbae75a678787544" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">KY: 22 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Packaging / Labeling</td><td style='text-align:right'>9</td></tr><tr><td>API – Other</td><td style='text-align:right'>6</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>4</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_b5965bfb028d908fecf33f4ec88379af.setContent(html_873de4bc2cf0f44ebbae75a678787544);
+        
+
+        circle_marker_32018c0270b1f0f4a085f38a88116b0b.bindPopup(popup_b5965bfb028d908fecf33f4ec88379af)
+        ;
+
+        
+    
+    
+            circle_marker_32018c0270b1f0f4a085f38a88116b0b.bindTooltip(
+                `<div>
+                     KY: 22 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a14e84079ae429a6c330cab042fca082 = L.circleMarker(
+                [31.169546, -91.867805],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.013878188659973, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_c612cdebcaee69c9190c57d72805ed79 = L.popup({"maxWidth": 350});
+
+        
+            var html_11db6bdb026f26a2daee71006aedd4d3 = $(`<div id="html_11db6bdb026f26a2daee71006aedd4d3" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">LA: 13 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>5</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>5</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>3</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_c612cdebcaee69c9190c57d72805ed79.setContent(html_11db6bdb026f26a2daee71006aedd4d3);
+        
+
+        circle_marker_a14e84079ae429a6c330cab042fca082.bindPopup(popup_c612cdebcaee69c9190c57d72805ed79)
+        ;
+
+        
+    
+    
+            circle_marker_a14e84079ae429a6c330cab042fca082.bindTooltip(
+                `<div>
+                     LA: 13 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_62acb64af91f36ffc290e2cf84a93e04 = L.circleMarker(
+                [42.230171, -71.530106],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.46291201783626, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_f923a6a47a615321b4ff13e52a787bb7 = L.popup({"maxWidth": 350});
+
+        
+            var html_b254a3b8b924a8615e72d651522db937 = $(`<div id="html_b254a3b8b924a8615e72d651522db937" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">MA: 29 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>11</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>8</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>3</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_f923a6a47a615321b4ff13e52a787bb7.setContent(html_b254a3b8b924a8615e72d651522db937);
+        
+
+        circle_marker_62acb64af91f36ffc290e2cf84a93e04.bindPopup(popup_f923a6a47a615321b4ff13e52a787bb7)
+        ;
+
+        
+    
+    
+            circle_marker_62acb64af91f36ffc290e2cf84a93e04.bindTooltip(
+                `<div>
+                     MA: 29 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dfe82bf33b5241379709e2b32bf72d45 = L.circleMarker(
+                [39.063946, -76.802101],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.46291201783626, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_1a85a546609ac53fbbe50116ad0124d4 = L.popup({"maxWidth": 350});
+
+        
+            var html_afed440093c267f053dba79c71b115c9 = $(`<div id="html_afed440093c267f053dba79c71b115c9" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">MD: 29 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>8</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>8</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>7</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_1a85a546609ac53fbbe50116ad0124d4.setContent(html_afed440093c267f053dba79c71b115c9);
+        
+
+        circle_marker_dfe82bf33b5241379709e2b32bf72d45.bindPopup(popup_1a85a546609ac53fbbe50116ad0124d4)
+        ;
+
+        
+    
+    
+            circle_marker_dfe82bf33b5241379709e2b32bf72d45.bindTooltip(
+                `<div>
+                     MD: 29 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_279f15b7d632637b76c94136583b5a99 = L.circleMarker(
+                [43.326618, -84.536095],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_657d261cbad5b6304b8da32c16acec59 = L.popup({"maxWidth": 350});
+
+        
+            var html_2b67ee807087c7deb556ac49b715331d = $(`<div id="html_2b67ee807087c7deb556ac49b715331d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">MI: 36 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>13</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>9</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>6</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>5</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_657d261cbad5b6304b8da32c16acec59.setContent(html_2b67ee807087c7deb556ac49b715331d);
+        
+
+        circle_marker_279f15b7d632637b76c94136583b5a99.bindPopup(popup_657d261cbad5b6304b8da32c16acec59)
+        ;
+
+        
+    
+    
+            circle_marker_279f15b7d632637b76c94136583b5a99.bindTooltip(
+                `<div>
+                     MI: 36 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8a444ca112b8cb3542ccb944ab3323a6 = L.circleMarker(
+                [45.694454, -93.900192],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.57737973711325, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_9ca82c56cfe6941373a75e345a70897b = L.popup({"maxWidth": 350});
+
+        
+            var html_e3a3483ff8a0cfa8361b1a68b2af1276 = $(`<div id="html_e3a3483ff8a0cfa8361b1a68b2af1276" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">MN: 34 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>9</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>9</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>9</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>4</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_9ca82c56cfe6941373a75e345a70897b.setContent(html_e3a3483ff8a0cfa8361b1a68b2af1276);
+        
+
+        circle_marker_8a444ca112b8cb3542ccb944ab3323a6.bindPopup(popup_9ca82c56cfe6941373a75e345a70897b)
+        ;
+
+        
+    
+    
+            circle_marker_8a444ca112b8cb3542ccb944ab3323a6.bindTooltip(
+                `<div>
+                     MN: 34 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f10989ff101ad75ad350b69acb1bfbcd = L.circleMarker(
+                [38.456085, -92.288368],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.20185174601965, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_f65a25bf8dec57b7efafa491d918226a = L.popup({"maxWidth": 350});
+
+        
+            var html_296c95fa3378c7b4a001902d165f7fed = $(`<div id="html_296c95fa3378c7b4a001902d165f7fed" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">MO: 42 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>25</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>6</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>4</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_f65a25bf8dec57b7efafa491d918226a.setContent(html_296c95fa3378c7b4a001902d165f7fed);
+        
+
+        circle_marker_f10989ff101ad75ad350b69acb1bfbcd.bindPopup(popup_f65a25bf8dec57b7efafa491d918226a)
+        ;
+
+        
+    
+    
+            circle_marker_f10989ff101ad75ad350b69acb1bfbcd.bindTooltip(
+                `<div>
+                     MO: 42 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa6b8e360b60680aadf835978a5c4da6 = L.circleMarker(
+                [32.741646, -89.678696],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_ae5a71b1eb9ada8eef8e37dd550ee9ac = L.popup({"maxWidth": 350});
+
+        
+            var html_696cfddcd61598cd8313ba6fcd46f291 = $(`<div id="html_696cfddcd61598cd8313ba6fcd46f291" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">MS: 1 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_ae5a71b1eb9ada8eef8e37dd550ee9ac.setContent(html_696cfddcd61598cd8313ba6fcd46f291);
+        
+
+        circle_marker_aa6b8e360b60680aadf835978a5c4da6.bindPopup(popup_ae5a71b1eb9ada8eef8e37dd550ee9ac)
+        ;
+
+        
+    
+    
+            circle_marker_aa6b8e360b60680aadf835978a5c4da6.bindTooltip(
+                `<div>
+                     MS: 1 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8861d67d3ca16884ec7c7fd5a9407f34 = L.circleMarker(
+                [35.630066, -79.806419],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_3eb9b49e2e67d105176d6b53bf2f008d = L.popup({"maxWidth": 350});
+
+        
+            var html_16f59130841e35551dd58517a5bd4793 = $(`<div id="html_16f59130841e35551dd58517a5bd4793" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">NC: 83 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>37</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>18</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>12</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>10</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>3</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_3eb9b49e2e67d105176d6b53bf2f008d.setContent(html_16f59130841e35551dd58517a5bd4793);
+        
+
+        circle_marker_8861d67d3ca16884ec7c7fd5a9407f34.bindPopup(popup_3eb9b49e2e67d105176d6b53bf2f008d)
+        ;
+
+        
+    
+    
+            circle_marker_8861d67d3ca16884ec7c7fd5a9407f34.bindTooltip(
+                `<div>
+                     NC: 83 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a9c56c75dde40773a32153383eaf3b81 = L.circleMarker(
+                [41.12537, -98.268082],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_c4870d70224fb138944854d5903f4201 = L.popup({"maxWidth": 350});
+
+        
+            var html_22a752eee6d79fa190821ed99fa0a974 = $(`<div id="html_22a752eee6d79fa190821ed99fa0a974" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">NE: 4 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>2</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_c4870d70224fb138944854d5903f4201.setContent(html_22a752eee6d79fa190821ed99fa0a974);
+        
+
+        circle_marker_a9c56c75dde40773a32153383eaf3b81.bindPopup(popup_c4870d70224fb138944854d5903f4201)
+        ;
+
+        
+    
+    
+            circle_marker_a9c56c75dde40773a32153383eaf3b81.bindTooltip(
+                `<div>
+                     NE: 4 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_01568350f25db7e8a887f66adb635cbb = L.circleMarker(
+                [43.452492, -71.563896],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.660254037844386, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_cf8ced68ed7f8502487a08601a8d6713 = L.popup({"maxWidth": 350});
+
+        
+            var html_37d11b2ae27b25cb91f05086235f24a3 = $(`<div id="html_37d11b2ae27b25cb91f05086235f24a3" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">NH: 12 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>FDF – Other</td><td style='text-align:right'>5</td></tr><tr><td>API – Other</td><td style='text-align:right'>4</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>2</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_cf8ced68ed7f8502487a08601a8d6713.setContent(html_37d11b2ae27b25cb91f05086235f24a3);
+        
+
+        circle_marker_01568350f25db7e8a887f66adb635cbb.bindPopup(popup_cf8ced68ed7f8502487a08601a8d6713)
+        ;
+
+        
+    
+    
+            circle_marker_01568350f25db7e8a887f66adb635cbb.bindTooltip(
+                `<div>
+                     NH: 12 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4ea12f3ca658c4c9200cc76b1ca21b43 = L.circleMarker(
+                [40.298904, -74.521011],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_921a9693397a6fbbb43f540a443b732c = L.popup({"maxWidth": 350});
+
+        
+            var html_6bd19f02c51e66806afe3c2b784600dc = $(`<div id="html_6bd19f02c51e66806afe3c2b784600dc" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">NJ: 189 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>76</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>50</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>41</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>19</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>2</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_921a9693397a6fbbb43f540a443b732c.setContent(html_6bd19f02c51e66806afe3c2b784600dc);
+        
+
+        circle_marker_4ea12f3ca658c4c9200cc76b1ca21b43.bindPopup(popup_921a9693397a6fbbb43f540a443b732c)
+        ;
+
+        
+    
+    
+            circle_marker_4ea12f3ca658c4c9200cc76b1ca21b43.bindTooltip(
+                `<div>
+                     NJ: 189 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e2c797e28d28f6e00f276f899f659a48 = L.circleMarker(
+                [34.840515, -106.248482],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_395f24fed952143f03b449f52f85cc8a = L.popup({"maxWidth": 350});
+
+        
+            var html_39517f52fee12cb674c2ea25bb1d3a83 = $(`<div id="html_39517f52fee12cb674c2ea25bb1d3a83" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">NM: 9 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Packaging / Labeling</td><td style='text-align:right'>3</td></tr><tr><td>API – Other</td><td style='text-align:right'>2</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>2</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_395f24fed952143f03b449f52f85cc8a.setContent(html_39517f52fee12cb674c2ea25bb1d3a83);
+        
+
+        circle_marker_e2c797e28d28f6e00f276f899f659a48.bindPopup(popup_395f24fed952143f03b449f52f85cc8a)
+        ;
+
+        
+    
+    
+            circle_marker_e2c797e28d28f6e00f276f899f659a48.bindTooltip(
+                `<div>
+                     NM: 9 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f7b119dd75b27389b363125bddff1aa8 = L.circleMarker(
+                [38.313515, -117.055374],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.071067811865476, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_7a2f7feff941f6631ebefc454fcb14c1 = L.popup({"maxWidth": 350});
+
+        
+            var html_9e24806ff24397e4113cb56e8b14a2c5 = $(`<div id="html_9e24806ff24397e4113cb56e8b14a2c5" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">NV: 8 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_7a2f7feff941f6631ebefc454fcb14c1.setContent(html_9e24806ff24397e4113cb56e8b14a2c5);
+        
+
+        circle_marker_f7b119dd75b27389b363125bddff1aa8.bindPopup(popup_7a2f7feff941f6631ebefc454fcb14c1)
+        ;
+
+        
+    
+    
+            circle_marker_f7b119dd75b27389b363125bddff1aa8.bindTooltip(
+                `<div>
+                     NV: 8 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f728bfa25e8d064a149d74c7402a9a6a = L.circleMarker(
+                [42.165726, -74.948051],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_4f79cb9d535b8c36bb55f7617924438d = L.popup({"maxWidth": 350});
+
+        
+            var html_5da20c2be17cfee19bd77d6cff46618f = $(`<div id="html_5da20c2be17cfee19bd77d6cff46618f" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">NY: 114 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>37</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>36</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>31</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>4</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>4</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_4f79cb9d535b8c36bb55f7617924438d.setContent(html_5da20c2be17cfee19bd77d6cff46618f);
+        
+
+        circle_marker_f728bfa25e8d064a149d74c7402a9a6a.bindPopup(popup_4f79cb9d535b8c36bb55f7617924438d)
+        ;
+
+        
+    
+    
+            circle_marker_f728bfa25e8d064a149d74c7402a9a6a.bindTooltip(
+                `<div>
+                     NY: 114 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9d0149d417e38b2f6770c4d777a6ff22 = L.circleMarker(
+                [40.388783, -82.764915],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.20185174601965, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_e7cfc927a878e0e206e612bb5ac32a87 = L.popup({"maxWidth": 350});
+
+        
+            var html_8e9b75425e2235a90db67e174da88e27 = $(`<div id="html_8e9b75425e2235a90db67e174da88e27" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">OH: 42 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>16</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>7</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>7</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>6</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>4</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_e7cfc927a878e0e206e612bb5ac32a87.setContent(html_8e9b75425e2235a90db67e174da88e27);
+        
+
+        circle_marker_9d0149d417e38b2f6770c4d777a6ff22.bindPopup(popup_e7cfc927a878e0e206e612bb5ac32a87)
+        ;
+
+        
+    
+    
+            circle_marker_9d0149d417e38b2f6770c4d777a6ff22.bindTooltip(
+                `<div>
+                     OH: 42 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_76c418eed61346780b99a139b17993f5 = L.circleMarker(
+                [35.565342, -96.928917],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.123724356957945, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_5202c5445a90f3677ab17f01164809b4 = L.popup({"maxWidth": 350});
+
+        
+            var html_d51cf999c3849e2f2bf92ac47124b8ee = $(`<div id="html_d51cf999c3849e2f2bf92ac47124b8ee" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">OK: 6 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>API – Other</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_5202c5445a90f3677ab17f01164809b4.setContent(html_d51cf999c3849e2f2bf92ac47124b8ee);
+        
+
+        circle_marker_76c418eed61346780b99a139b17993f5.bindPopup(popup_5202c5445a90f3677ab17f01164809b4)
+        ;
+
+        
+    
+    
+            circle_marker_76c418eed61346780b99a139b17993f5.bindTooltip(
+                `<div>
+                     OK: 6 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_066f127c7bd4edd053908a50d6129897 = L.circleMarker(
+                [44.572021, -122.070938],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_2743886a2a03bb2f3ca31721a7193fc8 = L.popup({"maxWidth": 350});
+
+        
+            var html_981318036672e730b72b67aac81e1239 = $(`<div id="html_981318036672e730b72b67aac81e1239" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">OR: 4 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_2743886a2a03bb2f3ca31721a7193fc8.setContent(html_981318036672e730b72b67aac81e1239);
+        
+
+        circle_marker_066f127c7bd4edd053908a50d6129897.bindPopup(popup_2743886a2a03bb2f3ca31721a7193fc8)
+        ;
+
+        
+    
+    
+            circle_marker_066f127c7bd4edd053908a50d6129897.bindTooltip(
+                `<div>
+                     OR: 4 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d67107e2b83c513781e5c2c3d161584d = L.circleMarker(
+                [40.590752, -77.209755],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_06524bd98ccd0ed7fafdeb1b5baab6ad = L.popup({"maxWidth": 350});
+
+        
+            var html_4551e1a74bd7ed288f6ecc4114f1cb9a = $(`<div id="html_4551e1a74bd7ed288f6ecc4114f1cb9a" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">PA: 81 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>31</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>21</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>16</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>5</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>5</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>3</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_06524bd98ccd0ed7fafdeb1b5baab6ad.setContent(html_4551e1a74bd7ed288f6ecc4114f1cb9a);
+        
+
+        circle_marker_d67107e2b83c513781e5c2c3d161584d.bindPopup(popup_06524bd98ccd0ed7fafdeb1b5baab6ad)
+        ;
+
+        
+    
+    
+            circle_marker_d67107e2b83c513781e5c2c3d161584d.bindTooltip(
+                `<div>
+                     PA: 81 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b0da3f05334d9a23f00ebd33e294b7bb = L.circleMarker(
+                [18.220833, -66.590149],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.18033988749895, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_780eb2e485d9c13db70d37ceabe3eaf8 = L.popup({"maxWidth": 350});
+
+        
+            var html_bf378889eaa14d1124c5c6232e76be63 = $(`<div id="html_bf378889eaa14d1124c5c6232e76be63" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">PR: 20 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>8</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>6</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>4</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_780eb2e485d9c13db70d37ceabe3eaf8.setContent(html_bf378889eaa14d1124c5c6232e76be63);
+        
+
+        circle_marker_b0da3f05334d9a23f00ebd33e294b7bb.bindPopup(popup_780eb2e485d9c13db70d37ceabe3eaf8)
+        ;
+
+        
+    
+    
+            circle_marker_b0da3f05334d9a23f00ebd33e294b7bb.bindTooltip(
+                `<div>
+                     PR: 20 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0eabd04029c9d1c4f1bf7d0a0971d5e2 = L.circleMarker(
+                [41.680893, -71.51178],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_7c731872de5bcba3583d5b154728996f = L.popup({"maxWidth": 350});
+
+        
+            var html_9772738b849fb149bf25299b4c3e571c = $(`<div id="html_9772738b849fb149bf25299b4c3e571c" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">RI: 4 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_7c731872de5bcba3583d5b154728996f.setContent(html_9772738b849fb149bf25299b4c3e571c);
+        
+
+        circle_marker_0eabd04029c9d1c4f1bf7d0a0971d5e2.bindPopup(popup_7c731872de5bcba3583d5b154728996f)
+        ;
+
+        
+    
+    
+            circle_marker_0eabd04029c9d1c4f1bf7d0a0971d5e2.bindTooltip(
+                `<div>
+                     RI: 4 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8ad93e8e90699464481dab9f667ac573 = L.circleMarker(
+                [33.856892, -80.945007],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_cceec2be89d957e51c24dafb982dd420 = L.popup({"maxWidth": 350});
+
+        
+            var html_22c65ed509744af63d4f31187a020be4 = $(`<div id="html_22c65ed509744af63d4f31187a020be4" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">SC: 36 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>11</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>9</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>8</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>5</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_cceec2be89d957e51c24dafb982dd420.setContent(html_22c65ed509744af63d4f31187a020be4);
+        
+
+        circle_marker_8ad93e8e90699464481dab9f667ac573.bindPopup(popup_cceec2be89d957e51c24dafb982dd420)
+        ;
+
+        
+    
+    
+            circle_marker_8ad93e8e90699464481dab9f667ac573.bindTooltip(
+                `<div>
+                     SC: 36 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eb68173b04e0bafeeb68e7c1bd22d5ed = L.circleMarker(
+                [35.747845, -86.692345],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.693063937629155, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_60f90171cf4831148060cd67fa33d37a = L.popup({"maxWidth": 350});
+
+        
+            var html_25d8a19b4e826eb2fa354340307cf15b = $(`<div id="html_25d8a19b4e826eb2fa354340307cf15b" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">TN: 30 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Packaging / Labeling</td><td style='text-align:right'>8</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>7</td></tr><tr><td>API – Other</td><td style='text-align:right'>6</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>5</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>4</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_60f90171cf4831148060cd67fa33d37a.setContent(html_25d8a19b4e826eb2fa354340307cf15b);
+        
+
+        circle_marker_eb68173b04e0bafeeb68e7c1bd22d5ed.bindPopup(popup_60f90171cf4831148060cd67fa33d37a)
+        ;
+
+        
+    
+    
+            circle_marker_eb68173b04e0bafeeb68e7c1bd22d5ed.bindTooltip(
+                `<div>
+                     TN: 30 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_97c0e1743c2a620127a04300f34bb9f4 = L.circleMarker(
+                [31.054487, -97.563461],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.027756377319946, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_d4d7af7f3c90482a0da7a6c15d5b412e = L.popup({"maxWidth": 350});
+
+        
+            var html_cce06849f0f4acfd8e37fe77eb58e81b = $(`<div id="html_cce06849f0f4acfd8e37fe77eb58e81b" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">TX: 52 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>17</td></tr><tr><td>API – Other</td><td style='text-align:right'>9</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>8</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>8</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>8</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>2</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_d4d7af7f3c90482a0da7a6c15d5b412e.setContent(html_cce06849f0f4acfd8e37fe77eb58e81b);
+        
+
+        circle_marker_97c0e1743c2a620127a04300f34bb9f4.bindPopup(popup_d4d7af7f3c90482a0da7a6c15d5b412e)
+        ;
+
+        
+    
+    
+            circle_marker_97c0e1743c2a620127a04300f34bb9f4.bindTooltip(
+                `<div>
+                     TX: 52 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_afe926f4814247efc4987625ce7d3113 = L.circleMarker(
+                [40.150032, -111.862434],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.4564392373896, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_6333a34cfed92f00ba177d82daf64d36 = L.popup({"maxWidth": 350});
+
+        
+            var html_4aae09aebc8531b210bcdd7bf5cfca40 = $(`<div id="html_4aae09aebc8531b210bcdd7bf5cfca40" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">UT: 21 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>8</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>5</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>5</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_6333a34cfed92f00ba177d82daf64d36.setContent(html_4aae09aebc8531b210bcdd7bf5cfca40);
+        
+
+        circle_marker_afe926f4814247efc4987625ce7d3113.bindPopup(popup_6333a34cfed92f00ba177d82daf64d36)
+        ;
+
+        
+    
+    
+            circle_marker_afe926f4814247efc4987625ce7d3113.bindTooltip(
+                `<div>
+                     UT: 21 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d66ad66a65f750116b00b588bfb431cc = L.circleMarker(
+                [37.769337, -78.169968],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.2915619758885, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_9ec24723924282e1da2de69570e5fc44 = L.popup({"maxWidth": 350});
+
+        
+            var html_52e485d3f8147b5b0b5c276f74e91a87 = $(`<div id="html_52e485d3f8147b5b0b5c276f74e91a87" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">VA: 11 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Packaging / Labeling</td><td style='text-align:right'>4</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>2</td></tr><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_9ec24723924282e1da2de69570e5fc44.setContent(html_52e485d3f8147b5b0b5c276f74e91a87);
+        
+
+        circle_marker_d66ad66a65f750116b00b588bfb431cc.bindPopup(popup_9ec24723924282e1da2de69570e5fc44)
+        ;
+
+        
+    
+    
+            circle_marker_d66ad66a65f750116b00b588bfb431cc.bindTooltip(
+                `<div>
+                     VA: 11 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15d5037bbfe6d88964b3aa7059b22faf = L.circleMarker(
+                [44.045876, -72.710686],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_8d32a2d09eac02385db5fdf9c5faba73 = L.popup({"maxWidth": 350});
+
+        
+            var html_25a41f6abfdd624577ebdc0ea34a8c86 = $(`<div id="html_25a41f6abfdd624577ebdc0ea34a8c86" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">VT: 4 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>1</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_8d32a2d09eac02385db5fdf9c5faba73.setContent(html_25a41f6abfdd624577ebdc0ea34a8c86);
+        
+
+        circle_marker_15d5037bbfe6d88964b3aa7059b22faf.bindPopup(popup_8d32a2d09eac02385db5fdf9c5faba73)
+        ;
+
+        
+    
+    
+            circle_marker_15d5037bbfe6d88964b3aa7059b22faf.bindTooltip(
+                `<div>
+                     VT: 4 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1958530a10be95c51b44e476a6362825 = L.circleMarker(
+                [47.400902, -121.490494],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.614378277661476, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_4b7995ce42be59ebdaf7a1c35ff3a314 = L.popup({"maxWidth": 350});
+
+        
+            var html_05233eb1239d6fd823c5bfd4cdc3559f = $(`<div id="html_05233eb1239d6fd823c5bfd4cdc3559f" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">WA: 7 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Other / Not Classified</td><td style='text-align:right'>3</td></tr><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>1</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_4b7995ce42be59ebdaf7a1c35ff3a314.setContent(html_05233eb1239d6fd823c5bfd4cdc3559f);
+        
+
+        circle_marker_1958530a10be95c51b44e476a6362825.bindPopup(popup_4b7995ce42be59ebdaf7a1c35ff3a314)
+        ;
+
+        
+    
+    
+            circle_marker_1958530a10be95c51b44e476a6362825.bindTooltip(
+                `<div>
+                     WA: 7 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8d9e3ec3297465349677760fffc15336 = L.circleMarker(
+                [44.268543, -89.616508],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.9895788082818, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_981a2391faa63296516485b32d251bf0 = L.popup({"maxWidth": 350});
+
+        
+            var html_ad665dd05da1a5069fef11601fc61f68 = $(`<div id="html_ad665dd05da1a5069fef11601fc61f68" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">WI: 23 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>15</td></tr><tr><td>FDF – Other</td><td style='text-align:right'>3</td></tr><tr><td>Other / Not Classified</td><td style='text-align:right'>2</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>2</td></tr><tr><td>Packaging / Labeling</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_981a2391faa63296516485b32d251bf0.setContent(html_ad665dd05da1a5069fef11601fc61f68);
+        
+
+        circle_marker_8d9e3ec3297465349677760fffc15336.bindPopup(popup_981a2391faa63296516485b32d251bf0)
+        ;
+
+        
+    
+    
+            circle_marker_8d9e3ec3297465349677760fffc15336.bindTooltip(
+                `<div>
+                     WI: 23 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_24699b5afb980a64c5b166285c59dff3 = L.circleMarker(
+                [38.491226, -80.954453],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.590169943749475, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_e8e0e9a64df4e0361bb67662834b92a1 = L.popup({"maxWidth": 350});
+
+        
+            var html_6ab808a931809e17b17b2a884e5cc35e = $(`<div id="html_6ab808a931809e17b17b2a884e5cc35e" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">WV: 5 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>Clinical / R&D</td><td style='text-align:right'>3</td></tr><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>QC / Analytical Lab</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_e8e0e9a64df4e0361bb67662834b92a1.setContent(html_6ab808a931809e17b17b2a884e5cc35e);
+        
+
+        circle_marker_24699b5afb980a64c5b166285c59dff3.bindPopup(popup_e8e0e9a64df4e0361bb67662834b92a1)
+        ;
+
+        
+    
+    
+            circle_marker_24699b5afb980a64c5b166285c59dff3.bindTooltip(
+                `<div>
+                     WV: 5 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c0ff477a48474e96147730cfc7ae8dbc = L.circleMarker(
+                [42.755966, -107.30249],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.535533905932738, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c29de324dd83e68041cfe9bd5513b1c4);
+        
+    
+        var popup_c6e00f6eacbc1b3cfb5f830be1c2fdb9 = L.popup({"maxWidth": 350});
+
+        
+            var html_a53b7a375e5f5b622b23bccd2c71992b = $(`<div id="html_a53b7a375e5f5b622b23bccd2c71992b" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial; font-size:12px;">       <h4 style="margin:0 0 6px 0;">WY: 2 facilities</h4>       <table style="border-collapse:collapse;">         <thead><tr><th style="text-align:left;">Site Type</th><th style="text-align:right;padding-left:12px;">Count</th></tr></thead>         <tbody><tr><td>API – Other</td><td style='text-align:right'>1</td></tr><tr><td>Clinical / R&D</td><td style='text-align:right'>1</td></tr></tbody>       </table>     </div>     </div>`)[0];
+            popup_c6e00f6eacbc1b3cfb5f830be1c2fdb9.setContent(html_a53b7a375e5f5b622b23bccd2c71992b);
+        
+
+        circle_marker_c0ff477a48474e96147730cfc7ae8dbc.bindPopup(popup_c6e00f6eacbc1b3cfb5f830be1c2fdb9)
+        ;
+
+        
+    
+    
+            circle_marker_c0ff477a48474e96147730cfc7ae8dbc.bindTooltip(
+                `<div>
+                     WY: 2 facilities
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_a02b06254d3cfd80b9f79071a4567bac = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_2b289b62e330c5bde7b1cb2868956e96,
+                },
+                overlays :  {
+                    "macro_element_c29de324dd83e68041cfe9bd5513b1c4" : marker_cluster_c29de324dd83e68041cfe9bd5513b1c4,
+                },
+            };
+            L.control.layers(
+                layer_control_a02b06254d3cfd80b9f79071a4567bac.base_layers,
+                layer_control_a02b06254d3cfd80b9f79071a4567bac.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_c29f2ef1f51b3e0a385d102aad28bd2f);
+        
+</script>
+</html>
